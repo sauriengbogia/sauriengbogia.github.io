@@ -19,7 +19,48 @@
   align-items: center;
  
 }
- 
+.heart {
+	width: 200px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	display: block;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	animation: heart 1s ease infinite
+}
+
+@keyframes heart {
+	96% {
+		transform: translate(-50%,-50%) scale(.8,.8)
+	}
+	100% {
+		transform: translate(-50%,-50%) scale(1,1)
+	}
+}
+
+.heart div {
+	background: #ff0000;
+	width: 71px;
+	height: 126px;
+	top: 40px;
+	display: block;
+	position: absolute;
+	border-radius: 50%
+	}
+
+.left {
+	left: 45px;
+	transform: rotate(330deg);
+}
+
+.right {
+	right: 45px;
+	transform: rotate(30deg);
+}
+
+
 .box {
   width: 100%;
   position: absolute;
@@ -321,17 +362,23 @@ var ParticlePool = (function() {
 })(document.getElementById('pinkboard'));
   </script>
   <div class="center-text",
-  style="background-color:rgb(0, 0, 0);
-         font-family:'Cooper Black', cursive;
+  style="//background-color:rgb(0, 0, 0);
+  	font-family:'Cooper Black', cursive;
         width: 100%;
-        color: rgb(225, 12, 168);
-        height:100%;
+        color: rgb(0,255,255); //rgb(225, 12, 168);
+        //height:100%;
         font-size: 24px;
         font-style: italic;
         display: flex;
-        align-items: center;
+        border-style: none;
         justify-content: center;
-        margin-bottom: 5px;
-        text-align: center;">Hồ Thị Xoan Thúi </div>
+        //margin-bottom: 5px;
+         z-index: 2;
+        text-align: center;">Uất Kim Hương thúi </div>
+        <div class="heart">
+  <div class="left"></div> // Hình Elip bên trái
+  <div class="right"></div> // Hình Elip bên phải
+  
+</div>
  </BODY>
 </HTML>
